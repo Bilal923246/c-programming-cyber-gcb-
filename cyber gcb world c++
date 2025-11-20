@@ -39,4 +39,176 @@ All programs include security considerations and best practices for secure codin
 
 Connecting programming excellence with cybersecurity expertise 🔐
 
+Basic C++ Programs
+1. Hello World Program
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    cout << "Welcome to C++ Programming" << endl;
+    return 0;
+}
+
+
+
+
+3. Simple Calculator
+#include <iostream>
+using namespace std;
+
+int main() {
+    double num1, num2;
+    char operation;
+    
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+    cout << "Enter operation (+, -, *, /): ";
+    cin >> operation;
+    
+    switch(operation) {
+        case '+':
+            cout << "Result: " << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << "Result: " << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << "Result: " << num1 * num2 << endl;
+            break;
+        case '/':
+            if (num2 != 0)
+                cout << "Result: " << num1 / num2 << endl;
+            else
+                cout << "Error: Division by zero!" << endl;
+            break;
+        default:
+            cout << "Invalid operation!" << endl;
+    }
+    
+    return 0;
+
+}
+
+
+4. Number Pattern (Pyramid)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rows;
+    
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
+
+
+5. Even/Odd Checker
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    
+    cout << "Enter a number: ";
+    cin >> number;
+    
+    if (number % 2 == 0) {
+        cout << number << " is Even" << endl;
+    } else {
+        cout << number << " is Odd" << endl;
+    }
+    
+    return 0;
+}
+
+
+
+
+6. Sum of Two Numbers
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, sum;
+    
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+    
+    sum = a + b;
+    cout << "Sum of " << a << " and " << b << " is: " << sum << endl;
+    
+    return 0;
+}
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string username, password;
+    
+    cout << "=== Simple Login System ===" << endl;
+    cout << "Enter username: ";
+    cin >> username;
+    cout << "Enter password: ";
+    cin >> password;
+    
+    if (username == "admin" && password == "1234") {
+        cout << "Login successful! Welcome " << username << endl;
+    } else {
+        cout << "Invalid username or password!" << endl;
+    }
+    
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float celsius, fahrenheit;
+    int choice;
+    
+    cout << "Temperature Converter" << endl;
+    cout << "1. Celsius to Fahrenheit" << endl;
+    cout << "2. Fahrenheit to Celsius" << endl;
+    cout << "Enter your choice (1 or 2): ";
+    cin >> choice;
+    
+    if (choice == 1) {
+        cout << "Enter temperature in Celsius: ";
+        cin >> celsius;
+        fahrenheit = (celsius * 9/5) + 32;
+        cout << celsius << "°C = " << fahrenheit << "°F" << endl;
+    } else if (choice == 2) {
+        cout << "Enter temperature in Fahrenheit: ";
+        cin >> fahrenheit;
+        celsius = (fahrenheit - 32) * 5/9;
+        cout << fahrenheit << "°F = " << celsius << "°C" << endl;
+    } else {
+        cout << "Invalid choice!" << endl;
+    }
+    
+    return 0;
+}
+
+
+
+
 
